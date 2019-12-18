@@ -13,7 +13,7 @@ let zIndex = 1;
 const createImage = (src, alt, title, width, height, className) => {
   let newImg = document.createElement("img");
 
-  if (src !== null) newImg.setAttribute("src", src);
+  if (src !== null) newImg.setAttribute("src", "https://akcameratest.000webhostapp.com"+src);
   if (alt !== null) newImg.setAttribute("alt", alt);
   if (title !== null) newImg.setAttribute("title", title);
   if (width !== null) newImg.setAttribute("width", width);
