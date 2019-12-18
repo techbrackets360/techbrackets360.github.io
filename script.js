@@ -69,7 +69,7 @@ captureButton.addEventListener("click", event => {
   let picture = canvasElement.toDataURL();
 
   // Save the file by posting it to the server
-  fetch("http://sadmin.infranet.in/api/save_image.php", {
+  fetch("https://akcameratest.000webhostapp.com/api/save_image.php", {
     method: "post",
     body: JSON.stringify({ data: picture })
   })
