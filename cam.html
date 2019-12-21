@@ -232,13 +232,13 @@ navigator.mediaDevices = ( navigator.getUserMedia ||
                       navigator.msGetUserMedia);
 
 
-if(!navigator.mediaDevices.getMedia){
+if(!navigator.mediaDevices.getUserMedia){
   displayErrorMessage("Your browser doesn't have support for the navigator.getUserMedia interface.");
 }
 else{
 
   // Request the camera.
-  navigator.mediaDevices.getMedia(
+  navigator.mediaDevices.getUserMedia(
     {
       video: true
     },
