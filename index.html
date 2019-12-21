@@ -4,9 +4,24 @@
     <meta charset="utf-8" />
     <title>Web app that takes pictures</title>
     <link rel="stylesheet" href="style.css">
+  
+    <script language="javascript">
+var popupWindow = null;
+function centeredPopup(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = 100;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
+ 
 </head>
 <body>
 <div class="layout">
+  <div class="center">
+    <button class="btn btn-primary" id="open-cam" onclick="centeredPopup('http://localhost/webapp-takepicture/cam.html','myWindow','700','500','yes');return false">Open camera</button>
+  </div>
   <div id="newImages"></div>
   
   <div class="row">
