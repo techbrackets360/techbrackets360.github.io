@@ -241,6 +241,7 @@ navigator.mediaDevices
     .then(stream => {
       videoPlayer.srcObject = stream;
       videoPlayer.style.display = "block";
+     showVideo();
     })
     .catch(err => {
       imagePickerArea.style.display = "block";
