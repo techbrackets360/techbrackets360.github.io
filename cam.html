@@ -260,7 +260,7 @@ start_camera.addEventListener("click", function(e){
   e.preventDefault();
 
   // Start video playback manually.
-  video.play();
+  videoPlayer.play();
   showVideo();
 
 });
@@ -284,7 +284,7 @@ take_photo_btn.addEventListener("click", function(e){
   download_photo_btn.href = snap;
 
   // Pause video playback of stream.
-  video.pause();
+  videoPlayer.pause();
 
 });
 
@@ -302,7 +302,7 @@ delete_photo_btn.addEventListener("click", function(e){
   download_photo_btn.classList.add("disabled");
 
   // Resume playback of stream.
-  video.play();
+  videoPlayer.play();
 
 });
 
@@ -312,7 +312,7 @@ function showVideo(){
   // Display the video stream and the controls.
 
   hideUI();
-  video.classList.add("visible");
+  videoPlayer.classList.add("visible");
   controls.classList.add("visible");
 }
 
@@ -323,8 +323,8 @@ function takeSnapshot(){
   var hidden_canvas = document.querySelector('canvas'),
       context = hidden_canvas.getContext('2d');
 
-  var width = video.videoWidth,
-      height = video.videoHeight;
+  var width = videoPlayer.videoWidth,
+      height = videoPlayer.videoHeight;
 
   if (width && height) {
 
@@ -359,7 +359,7 @@ function hideUI(){
 
   controls.classList.remove("visible");
   start_camera.classList.remove("visible");
-  video.classList.remove("visible");
+  videoPlayer.classList.remove("visible");
   snap.classList.remove("visible");
   error_message.classList.remove("visible");
 }
