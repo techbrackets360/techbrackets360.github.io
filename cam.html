@@ -63,7 +63,7 @@ h3{
     background-color: #ccc;
     color: #9b9b9b;
     font-size: 28px;
-    padding: 200px 100px;
+    padding: 50px 50px;
     text-align: center;
     display: none;
 }
@@ -153,7 +153,7 @@ h3{
     </style>
 </head>
 <body>
-    <h3><img src="logo.png" alt="logo" style="width:200px;"></h3>
+    <h3><img src="./logo.png" alt="logo" style="width:200px;"></h3>
 
 <div class="container">
 
@@ -204,7 +204,7 @@ navigator.mediaDevices
     
     })
     .catch(err => {
-      imagePickerArea.style.display = "none";
+        displayErrorMessage("There was an error with accessing the camera stream: " + err.name, err);
     });
   // Request the camera.
     showVideo();
